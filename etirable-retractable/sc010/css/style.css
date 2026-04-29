@@ -1,0 +1,10 @@
+#slidemenubar2{position:absolute;left:0px;top:50px;}
+/* Feuille de style */
+/* liens */
+.t {font-family: verdana,arial,helvetica; font-size: 11px; background: #EEEEEE}
+.t:link {color: #000000; text-decoration: none}
+.t:hover {color: #336633}
+.t:visited {color: #000000; text-decoration: none}
+/* titre */
+.t2 {font-family: verdana,arial,helvetica; font-size: 14px; text-align: center; background: #CCCCCC; font-weight: bold}
+

@@ -1,0 +1,670 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Jquery JavaScript Script</title>
+
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+
+<!-- Lier le menu social -->
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+
+<!-- Lier le fichier JavaScript du menu -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+
+<!-- Le JS pour fondu pastel -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+<style id="download-menu-style">
+html {
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  margin: 0;
+  color: #ffe9b8;
+  background:
+    linear-gradient(180deg, rgba(255, 210, 62, .12) 0, rgba(255, 95, 0, .18) 18%, rgba(105, 0, 0, .2) 42%, rgba(5, 5, 7, .98) 78%),
+    linear-gradient(90deg, #050505 0, #180404 24%, #2a0700 50%, #160303 76%, #050505 100%);
+  background-color: #050505;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 183, 45, .08) 0 1px, transparent 1px 54px),
+    repeating-linear-gradient(0deg, rgba(255, 59, 0, .07) 0 1px, transparent 1px 46px);
+  mix-blend-mode: screen;
+  opacity: .42;
+  animation: emberGrid 9s ease-in-out infinite alternate;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto -10% 0 -10%;
+  height: 42vh;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 18% 100%, rgba(255, 205, 55, .42), transparent 30%),
+    radial-gradient(ellipse at 46% 100%, rgba(255, 88, 0, .46), transparent 34%),
+    radial-gradient(ellipse at 74% 100%, rgba(218, 20, 0, .36), transparent 31%),
+    linear-gradient(0deg, rgba(255, 91, 0, .32), transparent 70%);
+  filter: blur(12px);
+  opacity: .78;
+  animation: forgeFlames 5.8s ease-in-out infinite alternate;
+}
+.download-menu-page {
+  max-width: 1220px;
+  margin: 34px auto;
+  padding: 0 18px 56px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.download-menu-page h1 {
+  margin: 0 0 22px;
+  padding: 18px 0 12px;
+  font-size: 36px;
+  line-height: 1.1;
+  color: #ffd45a;
+  text-align: center;
+  text-shadow: 0 0 8px #ff4b00, 0 0 24px #8a0900, 0 2px 0 #000000;
+  border-bottom: 2px solid rgba(255, 112, 0, .6);
+  animation: forgeTitle 2.8s ease-in-out infinite alternate;
+}
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+.download-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 119, 0, .72);
+  border-radius: 8px;
+  padding: 15px;
+  background:
+    linear-gradient(180deg, rgba(68, 24, 10, .96), rgba(16, 16, 18, .98) 56%, rgba(5, 5, 6, .98)),
+    #111111;
+  box-shadow: 0 0 0 1px rgba(255, 222, 90, .12) inset, 0 8px 24px rgba(0, 0, 0, .55), 0 0 20px rgba(255, 62, 0, .18);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  animation: cardRise .72s ease both, coalBreath 4.8s ease-in-out infinite alternate;
+  animation-delay: calc((var(--card-order, 1) - 1) * 38ms), calc((var(--card-order, 1) - 1) * 64ms);
+}
+.download-card::before {
+  content: "";
+  position: absolute;
+  inset: -60% -40%;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgba(255, 207, 65, .18) 47%, rgba(255, 98, 0, .13) 52%, transparent 62%);
+  transform: translateX(-55%) rotate(4deg);
+  animation: heatSweep 7s ease-in-out infinite;
+}
+.download-card:hover {
+  transform: translateY(-2px);
+  border-color: #ffd45a;
+  box-shadow: 0 0 0 1px rgba(255, 222, 90, .35) inset, 0 10px 28px rgba(0, 0, 0, .65), 0 0 26px rgba(255, 92, 0, .38);
+}
+.download-card strong {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #ffe7a1;
+  text-shadow: 0 0 8px rgba(255, 89, 0, .72), 0 1px 0 #000000;
+}
+.download-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.download-actions a {
+  display: inline-block;
+  padding: 10px 13px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0;
+  border: 1px solid transparent;
+  transition: transform .16s ease, filter .16s ease, box-shadow .16s ease;
+}
+.download-actions a:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.12);
+}
+.download-actions .open-demo {
+  background: #16191d;
+  color: #ffd45a;
+  border-color: rgba(255, 212, 90, .72);
+  box-shadow: 0 0 10px rgba(255, 212, 90, .16);
+}
+.download-actions .download-rar {
+  background: linear-gradient(180deg, #ffcf3f 0, #ff7614 34%, #c31812 100%);
+  color: #ffffff;
+  border-color: #ffdf6b;
+  box-shadow: 0 0 14px rgba(255, 92, 0, .5);
+  text-shadow: 0 1px 0 #560000;
+  animation: buttonGlow 2.4s ease-in-out infinite alternate;
+}
+@keyframes emberGrid {
+  from {
+    opacity: .26;
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    opacity: .52;
+    transform: translate3d(18px, -12px, 0);
+  }
+}
+@keyframes forgeFlames {
+  from {
+    opacity: .48;
+    transform: translateY(22px) scaleX(1);
+  }
+  50% {
+    opacity: .82;
+    transform: translateY(4px) scaleX(1.04);
+  }
+  to {
+    opacity: .64;
+    transform: translateY(14px) scaleX(.98);
+  }
+}
+@keyframes forgeTitle {
+  from {
+    text-shadow: 0 0 7px #ff4b00, 0 0 19px #8a0900, 0 2px 0 #000000;
+  }
+  to {
+    text-shadow: 0 0 12px #ffdf60, 0 0 31px #ff4b00, 0 0 44px #8a0900, 0 2px 0 #000000;
+  }
+}
+@keyframes cardRise {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes coalBreath {
+  from {
+    box-shadow: 0 0 0 1px rgba(255, 222, 90, .1) inset, 0 8px 24px rgba(0, 0, 0, .55), 0 0 14px rgba(255, 62, 0, .12);
+  }
+  to {
+    box-shadow: 0 0 0 1px rgba(255, 222, 90, .2) inset, 0 8px 24px rgba(0, 0, 0, .58), 0 0 24px rgba(255, 92, 0, .28);
+  }
+}
+@keyframes heatSweep {
+  0%, 42% {
+    transform: translateX(-62%) rotate(4deg);
+    opacity: 0;
+  }
+  55% {
+    opacity: 1;
+  }
+  72%, 100% {
+    transform: translateX(62%) rotate(4deg);
+    opacity: 0;
+  }
+}
+@keyframes buttonGlow {
+  from {
+    box-shadow: 0 0 11px rgba(255, 92, 0, .42);
+  }
+  to {
+    box-shadow: 0 0 18px rgba(255, 210, 72, .74), 0 0 27px rgba(255, 72, 0, .32);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .download-menu-page h1,
+  .download-card,
+  .download-card::before,
+  .download-actions .download-rar {
+    animation: none;
+  }
+}
+</style>
+</head>
+<body>
+<!-- menu social -->
+<nav class="social-menu">
+  <ul>
+    <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank">Pinterest</a></li>
+    <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank">Flickr</a></li>
+    <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank">Tumblr</a></li>
+    <li><a href="https://x.com/PascalDelfossee" target="_blank">X</a></li>
+    <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank">YouTube</a></li>
+  </ul>
+</nav>
+
+<!-- Le menu sera injecte ici -->
+<header></header>
+<!-- download-menu-start -->
+<main class="download-menu-page">
+  <h1>Menus et scripts a telecharger</h1>
+  <div class="download-grid">
+    <article class="download-card">
+      <strong>Affichage Date 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="affichage-date-2/sc029/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/affichage-date-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Anime Multicolore</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="anime-multicolore/anime-multicolore/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/anime-multicolore.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Anime Texte Icone</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="anime-texte-icone/anime-texte-icone/index1.html">Ouvrir</a>
+        <a class="download-rar" href="Download/anime-texte-icone.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Anime Vertical</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="anime-vertical/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/anime-vertical.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Apple Horizontal</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="apple-horizontal/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/apple-horizontal.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Apple Vertical</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="apple-vertical/apple-vertical/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/apple-vertical.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Arriere Plan Glissant</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="arriere-plan-glissant/apple-vertical/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/arriere-plan-glissant.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Bouton Anime</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="bouton-anime/bouton-anime/bouton-anime/css/websymbols/WebSymbolsRegular-demo.html">Ouvrir</a>
+        <a class="download-rar" href="Download/bouton-anime.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Bouton On Off Curseur</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="bouton-on-off-curseur/bouton-on-off-appareil/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/bouton-on-off-curseur.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Bouton On Off Hifi</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="bouton-on-off-hifi/bouton-on-off-hifi/bouton-on-off-hifi/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/bouton-on-off-hifi.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Bouton On Off Interrupteur</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="bouton-on-off-interrupteur/bouton-on-off-interrupteur/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/bouton-on-off-interrupteur.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Calculatrice</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="calculatrice/calculatrice/sc037/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/calculatrice.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Compact Vertical</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="compact-vertical/compact-vertical/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/compact-vertical.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Curseur Horizontal</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="curseur-horizontal/curseur-horizontal/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/curseur-horizontal.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Depliant Icone Horizontal</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="depliant-icone-horizontal/depliant-icone-horizontal/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/depliant-icone-horizontal.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Depliant Slide Vertical</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="depliant-slide-vertical/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/depliant-slide-vertical.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Depliant Vertical Reduit</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="depliant-vertical-reduit/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/depliant-vertical-reduit.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>DHTML Menu Pascal 2025</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="DHTML_Menu_Pascal_2025/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/DHTML_Menu_Pascal_2025.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Effet 3D Barre Laterale</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="effet-3D-barre-laterale/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/effet-3D-barre-laterale.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Effet 3D Barre Laterale 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="effet-3D-barre-laterale-2/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/effet-3D-barre-laterale-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Effet 3D Barre Laterale 3</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="effet-3D-barre-laterale-3/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/effet-3D-barre-laterale-3.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Effet 3D Barre Laterale Multiniveau</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="effet-3D-barre-laterale-multiniveau/effet-3D-barre-laterale-multiniveau/effet-3D-barre-laterale-multiniveau/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/effet-3D-barre-laterale-multiniveau.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Effet 3D Page</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="effet-3D-page/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/effet-3D-page.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Effet Texte 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="effet-texte-2/sc067/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/effet-texte-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Etirable Retractable</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="etirable-retractable/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/etirable-retractable.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Etirable Retractable 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="etirable-retractable-2/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/etirable-retractable-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Eventail</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="eventail/evantail/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/eventail.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Fenetre Modale 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="fenetre-modale-2/fenetre-modale-2/exemple.html">Ouvrir</a>
+        <a class="download-rar" href="Download/fenetre-modale-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Fixe Estompable</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="fixe-estompable/fixe-estompable/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/fixe-estompable.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Flottant Horizontal</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="flottant-horizontal/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/flottant-horizontal.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Flottant Vertical</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="flottant-vertical/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/flottant-vertical.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Fondu Horizontal</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="fondu-horizontal/fondu-horizontal/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/fondu-horizontal.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Google Nexus</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="google-nexus/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/google-nexus.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Grande Contenance</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="grande-contenance/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/grande-contenance.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Grande Contenance 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="grande-contenance-2/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/grande-contenance-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Histogramme Baton</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="histogramme-baton/sc038/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/histogramme-baton.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Horizontal Anime Rotation</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="horizontal-anime-rotation/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/horizontal-anime-rotation.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Horizontal Elastique</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="horizontal-elastique/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/horizontal-elastique.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Horizontal Multiniveau</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="horizontal-multiniveau/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/horizontal-multiniveau.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Horizontal Multiniveau 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="horizontal-multiniveau-2/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/horizontal-multiniveau-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Horizontal Multiniveau 3</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="horizontal-multiniveau-3/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/horizontal-multiniveau-3.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Horizontal Onglet</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="horizontal-onglet/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/horizontal-onglet.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Images En Rotation</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="images-en-rotation/sc032/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/images-en-rotation.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Info Bulle Superieur</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="info-bulle-superieur/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/info-bulle-superieur.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Info Bulle Superieur 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="info-bulle-superieur-2/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/info-bulle-superieur-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Machine A Sous</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="machine-a-sous/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/machine-a-sous.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Menu Gauche</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="menu%20gauche/menu%20gauche/documentation/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/menu%20gauche.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Message Attente</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="message-attente/sc072/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/message-attente.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Multi Style</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="multi-style/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/multi-style.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Mutli Plateforme</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="mutli-plateforme/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/mutli-plateforme.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Pleine Page Anime</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="pleine-page-anime/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/pleine-page-anime.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Pleine Page Anime 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="pleine-page-anime-2/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/pleine-page-anime-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Responsive Retractable</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="responsive-retractable/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/responsive-retractable.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Slide Horizontal Transparent</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="slide-horizontal-transparent/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/slide-horizontal-transparent.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Texte Clignotant 2</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="texte-clignotant-2/sc080/index.html">Ouvrir</a>
+        <a class="download-rar" href="Download/texte-clignotant-2.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Vertical Anime Rotation</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="vertical-anime-rotation/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/vertical-anime-rotation.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Vertical Multiniveau</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="vertical-multiniveau/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/vertical-multiniveau.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+    <article class="download-card">
+      <strong>Youtube</strong>
+      <div class="download-actions">
+        <a class="open-demo" href="youtube/index.htm">Ouvrir</a>
+        <a class="download-rar" href="Download/youtube.rar" download>Telecharger RAR</a>
+      </div>
+    </article>
+  </div>
+</main>
+<!-- download-menu-end -->
+<script>
+document.querySelectorAll('.download-card').forEach(function (card, index) {
+  card.style.setProperty('--card-order', index + 1);
+});
+</script>
+</body>
+</html>

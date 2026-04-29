@@ -1,0 +1,19 @@
+/* RESET */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{margin:0; padding:0;}
+
+/* CORPS */
+body { background: #222; color: #fff;}
+#corps { width:800px; margin:40px auto; }
+
+/* LISTE */
+#list {  }
+#list ul { list-style:none; }
+#list ul li { font-family:Georgia,serif,Times; font-size:18px; }
+#list ul li a { display:block; width:300px; height:28px; background-color:#555; border-left:5px solid #888; border-right:5px solid #333; padding-left:10px;	text-decoration:none; color:#bfe1f1; }
+#list ul li a:hover {  border-right:5px solid #888;
+	-moz-transform:rotate(-5deg); 
+	-moz-box-shadow:10px 10px 20px #000000;
+	-webkit-transform:rotate(-5deg); 
+	-webkit-box-shadow:10px 10px 20px #000000;
+	transform:rotate(-5deg); 
+	box-shadow:10px 10px 20px #000000; }

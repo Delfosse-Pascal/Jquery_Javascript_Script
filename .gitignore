@@ -29,3 +29,8 @@
 *.tgz
 *.bz2
 *.xz
+
+# System/cache files
+Thumbs.db
+.DS_Store
+pspbrwse.jbf

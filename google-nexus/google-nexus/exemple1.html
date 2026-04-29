@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Script jQuery Menu dépliant à la google nexus : Outils-web.com</title>
+<meta name="description" content="Script jQuery Reproduction du menu dépliant du google nexus" />
+<meta name="Robots" content="all"/>
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+<!-- download-archive-button-start -->
+<div class="download-archive-button" style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin:18px auto; padding:10px;">
+  <a href="../../Download/google-nexus.rar" download style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#ffffff; background:#cf2e2e; border-radius:6px; text-decoration:none; box-shadow:0 3px 9px rgba(0,0,0,.22);">TELECHARGER LE FICHIER RAR</a>
+  <a href="../../index.html" style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#102033; background:#ffd34f; border:2px solid #102033; border-radius:999px; text-decoration:none; box-shadow:0 3px 0 #102033;">RETOUR ACCUEIL</a>
+</div>
+<!-- download-archive-button-end -->
+<br /><br /><p class="tt" >Menu dépliant à la google nexus</p><br /><br />
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li class="gn-search-item">
+									<input placeholder="Recherche" type="search" class="gn-search">
+									<a class="gn-icon gn-icon-search"><span>Recherche</span></a>
+								</li>
+								<li>
+									<a class="gn-icon gn-icon-download">Téléchargements</a>
+									<ul class="gn-submenu">
+										<li><a class="gn-icon gn-icon-illustrator">Images Vectorielles</a></li>
+										<li><a class="gn-icon gn-icon-photoshop">Images Photoshop</a></li>
+									</ul>
+								</li>
+								<li><a class="gn-icon gn-icon-cog">Paramètres</a></li>
+								<li><a class="gn-icon gn-icon-help">Aide</a></li>
+								<li>
+									<a class="gn-icon gn-icon-archive">Archives</a>
+									<ul class="gn-submenu">
+										<li><a class="gn-icon gn-icon-article">Articles</a></li>
+										<li><a class="gn-icon gn-icon-pictures">Images</a></li>
+										<li><a class="gn-icon gn-icon-videos">Videos</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<li><a href="../../index.html">Outils-web</a></li>
+			</ul>
+			<header>
+				<h1>Menu du site du Google Nexus 7<span>Menu barre latérale comme sur le site <a href="../../index.html">Google Nexus 7</a> en haut à gauche :-)</span></h1>	
+			</header> 
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+</body>
+</html>

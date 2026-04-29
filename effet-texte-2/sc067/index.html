@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Scripts javascript : Aperçu</title>
+<SCRIPT LANGUAGE="JavaScript1.2">
+//contenu du message
+message = "outils-web.com Outils Webmasters";
+//interval de couleurs du texte
+colours = new Array('000099','ff6600')
+siZe = 30;
+message = message.split(' ');
+timer = null;
+clrPos = 0;
+msgPos = 0;
+jog = 1;
+currentStep = 10;
+step = 8;
+ns = (document.layers)?1:0;
+viz = (document.layers)?'hide':'hidden';
+if (ns)
+document.write("<div id='T' style='position:absolute'></div><br>");
+else {
+document.write("<div style='position:absolute'>");
+document.write("<div align='center' style='position:relative'>");
+document.write("<div id='T' style='position:absolute;width:0;height:0;font-family:Arial;font-size:0'>kurt</div>");
+document.write("</div></div><br>");
+}
+function Message() {
+var pageHeight = (document.layers)?window.innerHeight:window.document.body.offsetHeight;
+var pageWidth = (document.layers)?window.innerWidth:window.document.body.offsetWidth;
+if (ns) {
+ypos = pageHeight / 2;
+var Write = '<div align="center" style="width:0px;height:0px;font-family:Arial,Verdana;font-size:'+currentStep/4+'px;color:'+colours[clrPos]+'">'+message[msgPos]+'</div>';
+document.T.top = ypos + -currentStep / 8 + window.pageYOffset;
+document.T.document.write(Write)
+document.T.document.close();
+}
+else {
+ypos = pageHeight / 2;
+xpos = pageWidth / 2;
+T.style.width = currentStep;
+T.style.pixelTop = ypos + -currentStep / 16 + document.body.scrollTop;
+T.style.pixelLeft = (xpos - 20)+ -currentStep / 2;
+T.style.fontSize = currentStep / 8;
+T.innerHTML = message[msgPos];
+T.style.color = colours[clrPos];
+}
+if (ns)step += 5;
+else step += 15;
+currentStep += step
+if (ns) {
+if (currentStep > pageWidth) {
+currentStep = 10;
+step = 8;
+msgPos += jog;
+clrPos += jog;
+}
+if (clrPos >= colours.length) clrPos = 0;
+}
+else {
+if (currentStep > pageWidth * siZe) {
+currentStep = 10;
+step = 8;
+msgPos += jog;
+clrPos += jog;
+}
+if (clrPos >= colours.length) clrPos = 0;
+}
+if (msgPos >= message.length) {
+clearTimeout(timer);
+if (ns) document.T.visibility = viz;
+else T.style.visibility = viz;
+}
+//règlage de la vitesse
+timer = setTimeout("Message()",30)
+}
+//http://www.multimania.lycos.fr
+</script>
+
+
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+
+<!-- Lier le menu social -->
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+
+<!-- Lier le fichier JavaScript du menu -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+
+<!-- Le JS pour fondu pastel -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+</head>
+<BODY onLoad="Message()" bgcolor="#FFFFFF">
+<!-- download-archive-button-start -->
+<div class="download-archive-button" style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin:18px auto; padding:10px;">
+  <a href="../../Download/effet-texte-2.rar" download style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#ffffff; background:#cf2e2e; border-radius:6px; text-decoration:none; box-shadow:0 3px 9px rgba(0,0,0,.22);">TELECHARGER LE FICHIER RAR</a>
+  <a href="../../index.html" style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#102033; background:#ffd34f; border:2px solid #102033; border-radius:999px; text-decoration:none; box-shadow:0 3px 0 #102033;">RETOUR ACCUEIL</a>
+</div>
+<!-- download-archive-button-end -->
+<!-- menu social -->
+<nav class="social-menu">
+  <ul>
+    <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank">Pinterest</a></li>
+    <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank">Flickr</a></li>
+    <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank">Tumblr</a></li>
+    <li><a href="https://x.com/PascalDelfossee" target="_blank">X</a></li>
+    <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank">YouTube</a></li>
+  </ul>
+</nav>
+
+<!-- Le menu sera injecte ici -->
+<header></header>
+
+<br /><p class="tt" >Effet de texte 2</p><br /><br />
+
+
+</html>

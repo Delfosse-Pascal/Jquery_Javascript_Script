@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Barre latérale qui pousse la page à l'ouverture - script html CSS gratuit : Outils-web.com</title>
+<meta name="description" content="L'apparition de la barre latérale de menu se fait par déplacement de toute la page avec animation 2 ou 3D" />
+<meta name="Robots" content="all"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+
+</head>
+<body>
+<!-- download-archive-button-start -->
+<div class="download-archive-button" style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin:18px auto; padding:10px;">
+  <a href="../../Download/effet-3D-barre-laterale.rar" download style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#ffffff; background:#cf2e2e; border-radius:6px; text-decoration:none; box-shadow:0 3px 9px rgba(0,0,0,.22);">TELECHARGER LE FICHIER RAR</a>
+  <a href="../../index.html" style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#102033; background:#ffd34f; border:2px solid #102033; border-radius:999px; text-decoration:none; box-shadow:0 3px 0 #102033;">RETOUR ACCUEIL</a>
+</div>
+<!-- download-archive-button-end -->
+						<!-- 	les numéros d'effet correspondent à :
+								1 - Slide in on top
+								2 - Reveal
+								3 - Push
+								4 - Slide along
+								5 - Reverse slide out
+								6 - Rotate pusher
+								7 - 3D rotate in
+								8 - 3D rotate out
+								9 - Scale down pusher
+								10 - Scale Up
+								11 - Scale &amp; rotate pusher
+								12 - Open door
+								13 - Fall down
+								14 - Delayed 3D Rotat-->
+							<!-- les menus inutiles pour la démos sont en commentaires dans la réalité il n'y en aura qu'un!!! -->
+		<div id="st-container" class="st-container">
+<!-- 			<nav class="st-menu st-effect-1" id="menu-1">
+				<h2 class="icon icon-lab">Sidebar</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Data Management</a></li>
+					<li><a class="icon icon-location" href="#">Location</a></li>
+					<li><a class="icon icon-study" href="#">Study</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav>
+			
+			<nav class="st-menu st-effect-2" id="menu-2">
+				<h2 class="icon icon-stack">Sidebar</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Data Management</a></li>
+					<li><a class="icon icon-location" href="#">Location</a></li>
+					<li><a class="icon icon-study" href="#">Study</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav>
+
+			<nav class="st-menu st-effect-4" id="menu-4">
+				<h2 class="icon icon-lab">Sidebar</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Data Management</a></li>
+					<li><a class="icon icon-location" href="#">Location</a></li>
+					<li><a class="icon icon-study" href="#">Study</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav> -->
+
+			<nav class="st-menu st-effect-5" id="menu-5">
+				<h2 class="icon icon-stack">Menu</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Bases de données</a></li>
+					<li><a class="icon icon-location" href="#">Localisation</a></li>
+					<li><a class="icon icon-study" href="#">Etudes</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Informations</a></li>
+				</ul>
+			</nav>
+			
+			<!-- <nav class="st-menu st-effect-9" id="menu-9">
+				<h2 class="icon icon-lab">Sidebar</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Data Management</a></li>
+					<li><a class="icon icon-location" href="#">Location</a></li>
+					<li><a class="icon icon-study" href="#">Study</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav>
+			
+			<nav class="st-menu st-effect-10" id="menu-10">
+				<h2 class="icon icon-stack">Sidebar</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Data Management</a></li>
+					<li><a class="icon icon-location" href="#">Location</a></li>
+					<li><a class="icon icon-study" href="#">Study</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav>
+			
+			<nav class="st-menu st-effect-11" id="menu-11">
+				<h2 class="icon icon-lab">Sidebar</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Data Management</a></li>
+					<li><a class="icon icon-location" href="#">Location</a></li>
+					<li><a class="icon icon-study" href="#">Study</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav>
+
+			<nav class="st-menu st-effect-12" id="menu-12">
+				<h2 class="icon icon-stack">Sidebar</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Data Management</a></li>
+					<li><a class="icon icon-location" href="#">Location</a></li>
+					<li><a class="icon icon-study" href="#">Study</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Credits</a></li>
+				</ul>
+			</nav> -->
+
+			<nav class="st-menu st-effect-13" id="menu-13">
+				<h2 class="icon icon-stack">Menu</h2>
+				<ul>
+					<li><a class="icon icon-data" href="#">Bases de données</a></li>
+					<li><a class="icon icon-location" href="#">Localisation</a></li>
+					<li><a class="icon icon-study" href="#">Etudes</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Informations</a></li>
+				</ul>
+			</nav>
+
+			<!-- content push wrapper -->
+			<div class="st-pusher">
+<!-- 				<nav class="st-menu st-effect-3" id="menu-3">
+					<h2 class="icon icon-lab">Sidebar</h2>
+					<ul>
+						<li><a class="icon icon-data" href="#">Data Management</a></li>
+						<li><a class="icon icon-location" href="#">Location</a></li>
+						<li><a class="icon icon-study" href="#">Study</a></li>
+						<li><a class="icon icon-photo" href="#">Collections</a></li>
+						<li><a class="icon icon-wallet" href="#">Credits</a></li>
+					</ul>
+				</nav> -->
+
+				<nav class="st-menu st-effect-6" id="menu-6">
+					<h2 class="icon icon-stack">Menu</h2>
+					<ul>
+					<li><a class="icon icon-data" href="#">Bases de données</a></li>
+					<li><a class="icon icon-location" href="#">Localisation</a></li>
+					<li><a class="icon icon-study" href="#">Etudes</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Informations</a></li>
+					</ul>
+				</nav>
+
+				<nav class="st-menu st-effect-7" id="menu-7">
+					<h2 class="icon icon-lab">Menu</h2>
+					<ul>
+					<li><a class="icon icon-data" href="#">Bases de données</a></li>
+					<li><a class="icon icon-location" href="#">Localisation</a></li>
+					<li><a class="icon icon-study" href="#">Etudes</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Informations</a></li>
+					</ul>
+				</nav>
+
+				<nav class="st-menu st-effect-8" id="menu-8">
+					<h2 class="icon icon-stack">Menu</h2>
+					<ul>
+					<li><a class="icon icon-data" href="#">Bases de données</a></li>
+					<li><a class="icon icon-location" href="#">Localisation</a></li>
+					<li><a class="icon icon-study" href="#">Etudes</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Informations</a></li>
+					</ul>
+				</nav>
+
+				<nav class="st-menu st-effect-14" id="menu-14">
+					<h2 class="icon icon-stack">Menu</h2>
+					<ul>
+					<li><a class="icon icon-data" href="#">Bases de données</a></li>
+					<li><a class="icon icon-location" href="#">Localisation</a></li>
+					<li><a class="icon icon-study" href="#">Etudes</a></li>
+					<li><a class="icon icon-photo" href="#">Collections</a></li>
+					<li><a class="icon icon-wallet" href="#">Informations</a></li>
+					</ul>
+				</nav>
+
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<div class="main clearfix">
+							<div id="st-trigger-effects" class="column">
+								<button data-effect="st-effect-5">Volets inversés</button>
+								<button data-effect="st-effect-6">Pousse tourne</button>
+								<button data-effect="st-effect-7">Tourne pousse</button>
+								<button data-effect="st-effect-8">Tourne pousse 2</button>
+								<button data-effect="st-effect-13">Chute</button>
+								<button data-effect="st-effect-14">Pousse tourne avec retard</button>
+							</div>
+							<div class="column">
+								<p>L'apparition de la barre latérale de menu se fait par déplacement de toute la page</p>
+								</div>
+						</div><!-- /main -->
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			<!-- </div>/st-pusher -->
+		</div><!-- /st-container -->
+		<script src="js/classie.js"></script>
+		<script src="js/sidebarEffects.js"></script>
+</body>
+</html>

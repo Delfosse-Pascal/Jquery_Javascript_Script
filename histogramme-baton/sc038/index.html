@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Scripts javascript : Aperçu</title>
+<script language=JavaScript><!--
+var v=new Array(10);
+var nav,calk; 
+var textes="ABCDEFGHIJKLM"; // caractères à placer sous barres
+
+function histo()
+{
+ var ch="";
+// ci-dessous 160 représente la hauteur du tableau, si vous désirez afficher des barres plus grande
+//vous pouvez modifier ce paramètre
+ch+='<Table width=300 height=160  cellpadding=0 cellspacing=4';
+ch+=' bgcolor="#FFCC33"';
+ch+=' border=3><TR><TD>';
+ch+='<table width=100% height=100% cellpadding=0 cellspacing=0 >';
+ch+='<tr height=10><td colspan=20 align=center>';
+ch+='<font face="Verdana,Arial" size=-2 color="navy"><b>';
+ch+='<a href=http://www.outils-web.com >outils-web.com</a></B></FONT></td></TR><TR height=150>';
+ //i est le nombre de barres, ici 10
+  //les v[i] représentent les valeurs de chaque barre notez que v(1)>150, le tableau s'ajuste, mieux vaut se référrer ci-dessus
+v[0]=25;
+v[1]=200;
+v[2]=95;
+v[3]=32;
+v[4]=123;
+v[5]=18;
+v[6]=57;
+v[7]=75;
+v[8]=90;
+v[9]=110;
+v[10]=135;
+for (var i=0;i<10;i++)
+  { //***** dessin des barres****
+   ch+='<td width=10% valign=bottom>';
+// affichage des valeurs au dessus des barres
+   ch+='<center><font face="Tahoma" size="2">'+v[i]+'</font></center>';
+// b.gif est une image transparente, sa hauteur varie en fonction de i   
+   ch+='<img src="img/b.gif" width=30 height='+v[i]+' border=1 style="background: #AAAAAA"></TD>';
+   ch+='<td><img src="img/b.gif" width=2 height=5 border=0></td>';
+  }
+ ch+='</TR><TR>';
+ for ( var i=0;i<10;i++)
+  { //**** textes sous barres***
+    ch+='<TD align=center><font face="Verdana,Arial" size=-2 color=gray><B>'+textes.charAt(i)+'</B></font></td>';
+   ch+='<td><img src="b.gif" width=2 height=5 border=0></td>';	
+  }
+ ch+='</TR></table></td></table>';
+ his.innerHTML=ch; 
+
+}
+//-->
+</script>
+
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+
+<!-- Lier le menu social -->
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+
+<!-- Lier le fichier JavaScript du menu -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+
+<!-- Le JS pour fondu pastel -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+</head>
+<body onLoad="histo();" bgcolor="#eeeeee">
+<!-- download-archive-button-start -->
+<div class="download-archive-button" style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin:18px auto; padding:10px;">
+  <a href="../../Download/histogramme-baton.rar" download style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#ffffff; background:#cf2e2e; border-radius:6px; text-decoration:none; box-shadow:0 3px 9px rgba(0,0,0,.22);">TELECHARGER LE FICHIER RAR</a>
+  <a href="../../index.html" style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#102033; background:#ffd34f; border:2px solid #102033; border-radius:999px; text-decoration:none; box-shadow:0 3px 0 #102033;">RETOUR ACCUEIL</a>
+</div>
+<!-- download-archive-button-end -->
+<!-- menu social -->
+<nav class="social-menu">
+  <ul>
+    <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank">Pinterest</a></li>
+    <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank">Flickr</a></li>
+    <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank">Tumblr</a></li>
+    <li><a href="https://x.com/PascalDelfossee" target="_blank">X</a></li>
+    <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank">YouTube</a></li>
+  </ul>
+</nav>
+
+<!-- Le menu sera injecte ici -->
+<header></header>
+
+<br /><p class="tt" >Histogramme en batons</p><br /><br />
+
+<div id="his"></div>
+
+</body>
+</html>

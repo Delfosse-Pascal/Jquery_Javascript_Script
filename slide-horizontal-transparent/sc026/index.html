@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>jQuery sc026</title>
+<!-- http://modernizr.com/ -->
+<!-- traduit et adapté par outils-web.com -->
+<!-- chargement des feuilles de style -->
+<link rel="stylesheet" href="css/style.css">
+<!-- chargement des scripts -->	
+<script src="scr/jquery.js"></script>
+<script src="scr/modernizr.js"></script>
+
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+
+<!-- Lier le menu social -->
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+
+<!-- Lier le fichier JavaScript du menu -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+
+<!-- Le JS pour fondu pastel -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+</head>
+<body class="no-js">
+<!-- download-archive-button-start -->
+<div class="download-archive-button" style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin:18px auto; padding:10px;">
+  <a href="../../Download/slide-horizontal-transparent.rar" download style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#ffffff; background:#cf2e2e; border-radius:6px; text-decoration:none; box-shadow:0 3px 9px rgba(0,0,0,.22);">TELECHARGER LE FICHIER RAR</a>
+  <a href="../../index.html" style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#102033; background:#ffd34f; border:2px solid #102033; border-radius:999px; text-decoration:none; box-shadow:0 3px 0 #102033;">RETOUR ACCUEIL</a>
+</div>
+<!-- download-archive-button-end -->
+<!-- menu social -->
+<nav class="social-menu">
+  <ul>
+    <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank">Pinterest</a></li>
+    <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank">Flickr</a></li>
+    <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank">Tumblr</a></li>
+    <li><a href="https://x.com/PascalDelfossee" target="_blank">X</a></li>
+    <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank">YouTube</a></li>
+  </ul>
+</nav>
+
+<!-- Le menu sera injecte ici -->
+<header></header>
+<!-- Emplacement du menu -->		
+<nav id="topNav">
+	<ul>
+	<li><a href="#" title="">Accueil</a></li>
+	<li><a href="#" title="">Diaporamas</a>
+		<ul>
+		<li><a href="#" title="">HTML</a></li>
+		<li><a href="#" title="">jQuery</a></li>
+		<li><a href="#" title="">Flash</a></li>
+		</ul>
+	</li>
+	<li><a href="#" title="">Lightbox</a></li>
+	<li><a href="#" title="">Scripts</a>
+		<ul>
+		<li><a href="#" title="">Javascript</a></li>
+		<li><a href="#" title="">jQuery</a></li>
+		</ul>     				
+	</li>
+	<li class="last"><a href="#" title="">Contact</a></li>
+	</ul>
+</nav>
+<!-- Emplacement du contenu -->		
+<div class="content">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br />
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br />
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br />
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. <br />
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+</div>
+<!-- Initialisation de la fonction -->	
+<script>
+	var el = document.getElementsByTagName("body")[0];
+	el.className = "";
+	
+	(function($){
+		var nav = $("#topNav");
+		nav.find("li").each(function() {
+			if ($(this).find("ul").length > 0) {
+				$("<span>").text("^").appendTo($(this).children(":first"));
+				$(this).mouseenter(function() {
+				$(this).find("ul").stop(true, true).slideDown();});
+				$(this).mouseleave(function() {
+				$(this).find("ul").stop(true, true).slideUp();});
+			}
+		});
+	})(jQuery);
+</script>
+</body>
+</html>

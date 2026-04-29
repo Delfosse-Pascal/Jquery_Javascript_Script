@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Scripts javascript : Aperçu</title>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+var dn;
+c1 = new Image(); c1.src = "HD/c1.gif";
+c2 = new Image(); c2.src = "HD/c2.gif";
+c3 = new Image(); c3.src = "HD/c3.gif";
+c4 = new Image(); c4.src = "HD/c4.gif";
+c5 = new Image(); c5.src = "HD/c5.gif";
+c6 = new Image(); c6.src = "HD/c6.gif";
+c7 = new Image(); c7.src = "HD/c7.gif";
+c8 = new Image(); c8.src = "HD/c8.gif";
+c9 = new Image(); c9.src = "HD/c9.gif";
+c0 = new Image(); c0.src = "HD/c0.gif";
+cb = new Image(); cb.src = "HD/cb.gif";
+cam = new Image(); cam.src = "HD/cam.gif";
+cpm = new Image(); cpm.src = "HD/cpm.gif";
+function extract(h,m,s,type) {
+if (!document.images) return;
+if (h <= 9) {
+document.images.a.src = cb.src;
+document.images.b.src = eval("c"+h+".src");
+}
+else {
+document.images.a.src = eval("c"+Math.floor(h/10)+".src");
+document.images.b.src = eval("c"+(h%10)+".src");
+}
+if (m <= 9) {
+document.images.d.src = c0.src;
+document.images.e.src = eval("c"+m+".src");
+}
+else {
+document.images.d.src = eval("c"+Math.floor(m/10)+".src");
+document.images.e.src = eval("c"+(m%10)+".src");
+}
+if (s <= 9) {
+document.g.src = c0.src;
+document.images.h.src = eval("c"+s+".src");
+}
+else {
+document.images.g.src = eval("c"+Math.floor(s/10)+".src");
+document.images.h.src = eval("c"+(s%10)+".src");
+}
+if (dn == "AM") document.j.src = cam.src;
+else document.images.j.src = cpm.src;
+}
+function show3() {
+if (!document.images)
+return;
+var Digital = new Date();
+var hours = Digital.getHours();
+var minutes = Digital.getMinutes();
+var seconds = Digital.getSeconds();
+dn = "AM";
+if ((hours >= 12) && (minutes >= 1) || (hours >= 13)) {
+dn = "PM";
+hours = hours-12;
+}
+if (hours == 0)
+hours = 12;
+extract(hours, minutes, seconds, dn);
+setTimeout("show3()", 1000);
+}
+//  End -->
+</script>
+
+
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+
+<!-- Lier le menu social -->
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+
+<!-- Lier le fichier JavaScript du menu -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+
+<!-- Le JS pour fondu pastel -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+</head>
+
+<BODY onLoad="show3()" bgcolor="#000000">
+<!-- download-archive-button-start -->
+<div class="download-archive-button" style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin:18px auto; padding:10px;">
+  <a href="../../Download/affichage-date-2.rar" download style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#ffffff; background:#cf2e2e; border-radius:6px; text-decoration:none; box-shadow:0 3px 9px rgba(0,0,0,.22);">TELECHARGER LE FICHIER RAR</a>
+  <a href="../../index.html" style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#102033; background:#ffd34f; border:2px solid #102033; border-radius:999px; text-decoration:none; box-shadow:0 3px 0 #102033;">RETOUR ACCUEIL</a>
+</div>
+<!-- download-archive-button-end -->
+<!-- menu social -->
+<nav class="social-menu">
+  <ul>
+    <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank">Pinterest</a></li>
+    <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank">Flickr</a></li>
+    <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank">Tumblr</a></li>
+    <li><a href="https://x.com/PascalDelfossee" target="_blank">X</a></li>
+    <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank">YouTube</a></li>
+  </ul>
+</nav>
+
+<!-- Le menu sera injecte ici -->
+<header></header>
+<br /><p class="tt" >Affichage heure digitale</p><br /><br />
+
+<img height="21" src="HD/cb.gif" width="16" name="a">
+<img height="21" src="HD/cb.gif" width="16" name="b">
+<img height="21" src="HD/colon.gif" width="9" name="c">
+<img height="21" src="HD/cb.gif" width="16" name="d">
+<img height="21" src="HD/cb.gif" width="16" name="e">
+<img height="21" src="HD/colon.gif" width="9" name="f">
+<img height="21" src="HD/cb.gif" width="16" name="g">
+<img height="21" src="HD/cb.gif" width="16" name="h">
+<img height="21" src="HD/cam.gif" width="16" name="j">
+
+</body>

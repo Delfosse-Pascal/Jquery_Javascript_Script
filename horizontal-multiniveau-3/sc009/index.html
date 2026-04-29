@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Menu HTML / Javascript : Aperçu</title>
+<!-- http://lwis.net -->
+<!-- traduit et adapté par outils-web.com -->
+<!-- chargement des feuilles de style -->
+<link href="css/helper.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/default.css" media="screen" rel="stylesheet" type="text/css" />
+
+<link rel="canonical" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/">
+
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.png" type="image/png">
+<link rel="icon" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/favicondepascal.ico" type="image/x-icon">
+
+<!-- Lier le menu social -->
+<link rel="stylesheet" type="text/css" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/style.css">
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/script.js"></script>
+
+<!-- Lier le fichier JavaScript du menu -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/menu.js" defer></script>
+<link rel="stylesheet" href="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/basedusite.css">
+
+<!-- Le JS pour fondu pastel -->
+<script src="https://filedn.eu/llN3kr5vmyEBPIWCwFj3O6h/Site_Web/couleurs.js"></script>
+</head>
+<body>
+<!-- download-archive-button-start -->
+<div class="download-archive-button" style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; margin:18px auto; padding:10px;">
+  <a href="../../Download/horizontal-multiniveau-3.rar" download style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#ffffff; background:#cf2e2e; border-radius:6px; text-decoration:none; box-shadow:0 3px 9px rgba(0,0,0,.22);">TELECHARGER LE FICHIER RAR</a>
+  <a href="../../index.html" style="display:inline-block; padding:11px 19px; font-size:12px; line-height:1.2; font-weight:bold; color:#102033; background:#ffd34f; border:2px solid #102033; border-radius:999px; text-decoration:none; box-shadow:0 3px 0 #102033;">RETOUR ACCUEIL</a>
+</div>
+<!-- download-archive-button-end -->
+<!-- menu social -->
+<nav class="social-menu">
+  <ul>
+    <li><a href="https://fr.pinterest.com/pascal509/mes-tableaux-tous-genre/" target="_blank">Pinterest</a></li>
+    <li><a href="https://www.flickr.com/photos/delfossepascal" target="_blank">Flickr</a></li>
+    <li><a href="https://www.tumblr.com/lestoilesdepascal" target="_blank">Tumblr</a></li>
+    <li><a href="https://x.com/PascalDelfossee" target="_blank">X</a></li>
+    <li><a href="https://www.youtube.com/c/DelfossePascal" target="_blank">YouTube</a></li>
+  </ul>
+</nav>
+
+<!-- Le menu sera injecte ici -->
+<header></header>
+
+<h1>Menu dépliant horizontal</h1>
+<ul id="nav" class="dropdown dropdown-horizontal">
+	<li class="first"><a href="#">Accueil</a></li>
+	<li class="dir">Scripts
+		<ul>
+			<li class="first"><a href="#">sous-menu</a></li>
+			<li><a href="#">sous-menu</a></li>
+			<li><a href="#" class="dir">Langages</a>
+				<ul>
+					<li class="first"><a href="#">jQuery</a></li>
+					<li><a href="#">Javascript</a></li>
+					<li><a href="#">Flash</a></li>
+					<li class="last"><a href="#">C</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Diaporamas</a></li>
+			<li><a href="#">Lightbox</a></li>
+			<li class="last"><a href="#">Liens</a></li>
+		</ul>
+	</li>
+	<li class="dir">Services
+		<ul>
+			<li class="first"><a href="#">sous-menu</a></li>
+			<li><a href="#">sous-menu</a></li>
+			<li><a href="#">sous-menu</a></li>
+			<li><a href="#">sous-menu</a></li>
+			<li class="last"><a href="#">sous-menu</a></li>
+		</ul>
+	</li>
+	<li class="dir">Produits
+		<ul>
+			<li class="first"><a href="#" class="dir">sous-menu</a>
+				<ul>
+					<li class="first"><a href="#">sous-menu</a></li>
+					<li class="last"><a href="#">sous-menu</a></li>
+				</ul>
+			</li>
+			<li><a href="#" class="dir">sous-menu</a>
+				<ul>
+					<li class="first"><a href="#">sous-menu</a></li>
+					<li class="last"><a href="#">sous-menu</a></li>
+				</ul>
+			</li>
+			<li><a href="#">sous-menu</a></li>
+			<li><a href="#">sous-menu</a></li>
+			<li class="last"><a href="#">sous-menu</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Portfolio</a></li>
+	<li class="dir last">
+		<form method="post" action="">
+			<fieldset>
+				<label for="search">Search:</label>
+				<input type="text" id="search" class="text" value="Recherche" onfocus="if (this.value == 'Search!') this.value = '';" onblur="if (this.value == '') this.value = 'Search!';" maxlength="255" />
+				<input type="image" src="images/btn_search.png" class="button" />
+			</fieldset>
+		</form>
+	</li>
+</ul>
+</body>
+</html>

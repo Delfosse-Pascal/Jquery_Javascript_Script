@@ -1,0 +1,10 @@
+@charset "iso-8859-1";
+* { margin: 0; padding: 0; }
+body { font: 13px "Trebuchet MS", Verdana, Helvetica, sans-serif; color: #666; }
+
+/* paramètres du menu */
+#dock { position: relative; top: 150px; }
+.dock-container { position: relative; top: -8px; height: 50px; padding-left: 20px; }
+a.dock-item { display: block; width: 50px; position: absolute; bottom: 0; text-align: center; text-decoration: none; color: #333; }
+.dock-item span { display: none; padding-left: 20px; }
+.dock-item img { border: 0; margin: 5px 10px 0px; width: 100%; }

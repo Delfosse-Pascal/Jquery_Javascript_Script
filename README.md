@@ -2,43 +2,64 @@
 
 Collection d'exemples, scripts et menus interactifs en jQuery / JavaScript.
 
-Ce dépôt regroupe différents effets visuels et composants prêts à tester :
+Le depot regroupe des demonstrations HTML statiques autour de menus, animations, boutons, effets de texte, composants visuels et scripts anciens conserves comme archives de demonstration.
 
-- menus horizontaux, verticaux et multiniveaux ;
-- boutons animés et effets 3D ;
-- carrousels, slideshows et animations d'images ;
-- infobulles, popups et fenêtres modales ;
-- effets de texte, compte à rebours, affichage de date/heure ;
-- archives `.zip` contenant plusieurs démonstrations.
+## Accueil
+
+La page principale est :
+
+- `index.html`
+
+Elle sert de menu general pour les tiroirs du projet. Elle contient une grille animee style "Forge Infernale" avec :
+
+- un bouton `Ouvrir` vers une page de demonstration ;
+- un bouton `Telecharger RAR` vers l'archive correspondante dans `Download/`.
+
+## Telechargements
+
+Les archives sont rangees dans :
+
+- `Download/`
+
+Chaque fichier `.rar` porte le meme nom que son tiroir. Exemple :
+
+- `anime-texte-icone/`
+- `Download/anime-texte-icone.rar`
+
+Les pages `.htm` et `.html` des tiroirs contiennent aussi un bouton :
+
+- `TELECHARGER LE FICHIER RAR`
+- `RETOUR ACCUEIL`
+
+Le premier telecharge l'archive `.rar` du tiroir. Le second renvoie vers l'`index.html` a la racine.
 
 ## Organisation
 
-Les dossiers principaux contiennent généralement une démonstration complète avec un fichier HTML, des feuilles CSS, des scripts JavaScript et des images.
+Les dossiers principaux contiennent generalement une demonstration complete avec fichiers HTML, CSS, JavaScript et parfois des images.
 
-Exemples :
+Exemples de tiroirs :
 
 - `anime-multicolore/`
+- `anime-texte-icone/`
 - `apple-horizontal/`
-- `bouton-3D-reflet/`
-- `depliant-icone-horizontal/`
 - `effet-3D-barre-laterale/`
 - `machine-a-sous/`
+- `multi-style/`
 - `responsive-retractable/`
-
-Le dossier `apercus/` contient des images d'aperçu pour plusieurs effets.
-
-Le dossier `RAR_Download/` et les fichiers `.zip` à la racine regroupent des versions compressées de certaines démonstrations.
+- `youtube/`
 
 ## Utilisation
 
-Pour tester un exemple :
+Pour tester le projet :
 
-1. Ouvrir le dossier de l'effet souhaité.
-2. Lancer le fichier `index.html`, `index.htm` ou autre fichier HTML présent dans le dossier.
-3. Vérifier que les sous-dossiers `css`, `js`, `scr` ou `images` restent à côté du fichier HTML.
+1. Ouvrir `index.html` dans un navigateur.
+2. Cliquer sur `Ouvrir` pour lancer une demonstration.
+3. Cliquer sur `Telecharger RAR` ou `TELECHARGER LE FICHIER RAR` pour recuperer l'archive du tiroir.
 
-La plupart des exemples sont statiques et peuvent être ouverts directement dans un navigateur.
+La plupart des exemples sont statiques et peuvent etre ouverts directement dans un navigateur, sans serveur local.
 
-## Remarque
+## Remarques
 
-Certains scripts utilisent d'anciennes versions de jQuery. Ils sont conservés comme exemples ou archives de démonstration.
+Certains scripts utilisent d'anciennes versions de jQuery. Ils sont conserves comme exemples ou archives.
+
+Les fichiers d'images, videos et archives sont ignores par Git via `.gitignore`, sauf changement volontaire de cette regle.
