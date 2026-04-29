@@ -1,0 +1,109 @@
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] body {
+  background-color: #080706 !important;
+  color: #fff3d6 !important;
+}
+
+html[data-theme="light"] body {
+  background-color: #fff8ea !important;
+  color: #21170f !important;
+}
+
+html[data-theme="dark"] table,
+html[data-theme="dark"] td,
+html[data-theme="dark"] th,
+html[data-theme="dark"] div,
+html[data-theme="dark"] section,
+html[data-theme="dark"] article,
+html[data-theme="dark"] main,
+html[data-theme="dark"] p,
+html[data-theme="dark"] li {
+  color: #fff3d6 !important;
+}
+
+html[data-theme="light"] table,
+html[data-theme="light"] td,
+html[data-theme="light"] th,
+html[data-theme="light"] div,
+html[data-theme="light"] section,
+html[data-theme="light"] article,
+html[data-theme="light"] main,
+html[data-theme="light"] p,
+html[data-theme="light"] li {
+  color: #21170f !important;
+}
+
+html[data-theme="dark"] a {
+  color: #ffd166 !important;
+}
+
+html[data-theme="light"] a {
+  color: #9d2c00 !important;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select,
+html[data-theme="dark"] button {
+  background-color: #20130d;
+  color: #fff3d6;
+  border-color: #ff8a1f;
+}
+
+html[data-theme="light"] input,
+html[data-theme="light"] textarea,
+html[data-theme="light"] select,
+html[data-theme="light"] button {
+  background-color: #fffaf0;
+  color: #21170f;
+  border-color: #cc6b22;
+}
+
+.theme-toggle-button {
+  position: fixed;
+  z-index: 2147483647;
+  top: 14px;
+  right: 14px;
+  min-width: 124px;
+  padding: 9px 13px;
+  border: 1px solid rgba(255, 177, 74, .8);
+  border-radius: 999px;
+  font: 700 13px/1.2 Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+}
+
+.theme-toggle-button:hover,
+.theme-toggle-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(255, 110, 0, .32);
+}
+
+html[data-theme="dark"] .theme-toggle-button {
+  background: linear-gradient(135deg, #1b0904, #7a1600 55%, #ff9700);
+  color: #fff8dd;
+}
+
+html[data-theme="light"] .theme-toggle-button {
+  background: linear-gradient(135deg, #fff4c7, #ffd36a 55%, #ffffff);
+  color: #541500;
+}
+
+@media (max-width: 560px) {
+  .theme-toggle-button {
+    top: 10px;
+    right: 10px;
+    min-width: 104px;
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

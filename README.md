@@ -15,6 +15,8 @@ Elle sert de menu general pour les tiroirs du projet. Elle contient une grille a
 - un bouton `Ouvrir` vers une page de demonstration ;
 - un bouton `Telecharger RAR` vers l'archive correspondante dans `Download/`.
 
+Toutes les pages `.htm` et `.html` ont aussi un bouton `Mode clair` / `Mode sombre`. Le choix est garde dans le navigateur pour rester identique quand on change de page.
+
 ## Telechargements
 
 Les archives sont rangees dans :
@@ -57,6 +59,11 @@ Pour tester le projet :
 3. Cliquer sur `Telecharger RAR` ou `TELECHARGER LE FICHIER RAR` pour recuperer l'archive du tiroir.
 
 La plupart des exemples sont statiques et peuvent etre ouverts directement dans un navigateur, sans serveur local.
+
+Les fichiers communs du mode sombre / clair sont :
+
+- `theme-toggle.css`
+- `theme-toggle.js`
 
 ## Remarques
 
