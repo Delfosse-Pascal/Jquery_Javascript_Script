@@ -1,0 +1,31 @@
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+*.svg
+*.ico
+*.tif
+*.tiff
+
+# Videos
+*.mp4
+*.webm
+*.mov
+*.avi
+*.mkv
+*.m4v
+*.wmv
+*.flv
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.tgz
+*.bz2
+*.xz
