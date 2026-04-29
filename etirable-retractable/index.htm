@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Outils-web.com - Menu html CSS gratuit : Menu étirable et rétractable (texte)</title>
+<meta name="Robots" content="index">
+<meta name="description" content="menu html CSS gratuit, Menu étirable et rétractable (texte) se déplie en survolant l'onglet qui figure à gauche à la position désirée, dès qu'on s'écarte il se replie. Format texte">
+<style>
+.btn, .tt {font-family: Verdana,Arial,sans-serif;  color: #FFFFFF; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+.btn {background: #9fbd13;padding: 10px; text-decoration: none; border: 1px solid #899f11; text-shadow: 1px 1px 1px #000000; font-size: 1.2em; }
+.tt {background: #899f11;padding: 5px; text-align:center;}
+</style>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a href="../../index.htm"><img src="../../img/ow.png" border="0" width="400" height="100" alt=""></a>
+<br><p class="tt">Menu étirable et rétractable (texte)</p><br><br>
+<script type="text/javascript">
+ie4 = document.all;
+dom = document.getElementById;
+</script>
+<div id="slidemenubar2" onmouseover="pull()" onmouseout="draw()">
+		<table width="200" cellpadding="0" cellspacing="1" border="0" bgcolor="#CCCCCC">
+			<tr>
+				<td width="170" class="t">
+						<script language="JavaScript">
+						var sitems=new Array();
+						sitems[0]= 'Outils-web.com';
+						sitems[1]= 'Menus flash';
+						sitems[2]= 'Scripts lightbox';
+						sitems[3]= 'Diaporama flash';
+						
+						var sitemlinks=new Array();
+						sitemlinks[0]= 'url1';
+						sitemlinks[1]= 'url2';
+						sitemlinks[2]= 'url3';
+						sitemlinks[3]= 'url4';
+						
+						for (i=0;i<=sitems.length-1;i++)
+						document.write('&nbsp;&nbsp; • <a href="'+sitemlinks[i]+'" class="t">'+sitems[i]+'</a><br/>')
+						</script>
+				</td>
+				<td width="30" class="t2">
+						M<br>E<br>N<br>U
+				</td>
+				</tr>
+			</table>
+</div>
+<script type="text/javascript">
+if(dom)
+	{themenu=document.getElementById("slidemenubar2").style;
+	themenu.left = -170;}
+else if (ie4)
+	{themenu=document.all.slidemenubar2.style;
+	themenu.left = -170;}
+function pull()
+	{themenu.left = 0;}
+function draw()
+	{themenu.left = -170;}
+</script>
+<br><br><br><br><br><br>
+&nbsp; &nbsp; <a href="#" class="btn" onclick="window.close()">FERMER LA FENETRE</a>
+<br><br>
+
+<br><br><br>
+</body>
+</html>

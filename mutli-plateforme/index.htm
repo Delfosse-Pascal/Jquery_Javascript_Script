@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Menu qui s'adapte à la taille du navigateur - script html CSS gratuit : Outils-web.com</title>
+<meta name="description" content="Le menu change d'apparence en fonction de la taille de la fenetre du navigateur, idéal donc pour les smartphones et tablettes">
+<meta name="Robots" content="all">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" media="screen" type="text/css" href="../../css/style_pop.css">
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="../../gtag/js?id=G-0HJ2R3BJ8E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0HJ2R3BJ8E');
+</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="stylesheet" type="text/css" href="css/default.css">
+<link rel="stylesheet" type="text/css" href="css/component.css">
+<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+<a href="../../index.htm"><img src="../../img/ow.png" border="0" width="400" height="100" alt=""></a>
+<br><p class="tt">Le menu change d'apparence en fonction de la taille de la fenetre du navigateur, idéal donc pour les smartphones et tablettes</p><br><br>		
+
+<div class="container">	
+	<p align="center">Réduisez la taille de la fenêtre si vous êtes sur desktop pour voir l'évolution du menu, <br><u><b>sa forme va s'adapter</b></u> à la taille du browser</p>
+	<p align="center"><img src="Capture%201.PNG" border="0" width="100" height="59" alt=""> &nbsp; <img src="Capture%202.PNG" border="0" width="179" height="59" alt=""></p>
+	<div class="main clearfix">
+		<nav id="menu" class="nav">					
+			<ul>
+				<li>
+					<a href="#">
+						<span class="icon">
+							<i aria-hidden="true" class="icon-home"></i>
+						</span>
+						<span>Accueil</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon"> 
+							<i aria-hidden="true" class="icon-services"></i>
+						</span>
+						<span>Services</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon">
+							<i aria-hidden="true" class="icon-portfolio"></i>
+						</span>
+						<span>Portfolio</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon">
+							<i aria-hidden="true" class="icon-blog"></i>
+						</span>
+						<span>Blog</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon">
+							<i aria-hidden="true" class="icon-team"></i>
+						</span>
+						<span>L'équipe</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon">
+							<i aria-hidden="true" class="icon-contact"></i>
+						</span>
+						<span>Contact</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>&nbsp; &nbsp; <a href="#" class="btn" onclick="window.close()">FERMER LA FENETRE</a>
+<br><br>
+<div align="center">
+<script async="" src="../../pagead/js/f.txt"></script>
+<!-- Scripts -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1653301921633219" data-ad-slot="8529892455" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div style="top: 20px; right: 0px; height: 50px; overflow: hidden; position: absolute"><a href="https://twitter.com/share" class="twitter-share-button" data-via="WebOutils" data-count="none" data-lang="fr">Tweeter</a>&nbsp; 
+<a href="https://twitter.com/WebOutils" class="twitter-follow-button" data-show-count="false" data-lang="fr" data-show-screen-name="false">Suivre Outils-web</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div class="g-plusone" data-annotation="none"></div>&nbsp; <script src="../../js/platform.js" async="" defer="">  {lang: 'fr'}</script>
+<iframe src="//www.facebook.com/plugins/like.php?href=http://www.outils-web.com&width&layout=button_count&action=like&show_faces=false&share=true&height=21&appId=301660269867203" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowtransparency="true"></iframe>
+</div>
+
+<br><br><br>
+</div><!-- /container -->
+<script>
+	//  Changement de class
+	var changeClass = function (r,className1,className2) {
+		var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+		if( regex.test(r.className) ) {
+			r.className = r.className.replace(regex,' '+className2+' ');
+	    }
+	    else{
+			r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+	    }
+	    return r.className;
+	};	
+	//  Creation du bouton pour écran plus petit
+	var menuElements = document.getElementById('menu');
+	menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+	//  Affichage / fermeture du menu
+	document.getElementById('menutoggle').onclick = function() {
+	changeClass(this, 'navtoogle active', 'navtoogle');
+		}
+	// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+	document.onclick = function(e) {
+		var mobileButton = document.getElementById('menutoggle'),
+			buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+			if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+			changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+		}
+	}
+</script>
+</body>
+</html>

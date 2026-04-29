@@ -1,0 +1,25 @@
+@charset "iso-8859-1";
+body{font-size:0.85em;font-family:Verdana, Arial, Helvetica, sans-serif;}
+
+.kwicks {list-style: none; position: relative;  margin: 0; padding: 0; background-image:url(../images/no_flicker-1.jpg); }  
+.kwicks li{display: block; overflow: hidden; padding: 0;  cursor: pointer;  float: left;width: 125px;height: 40px;margin-right: 0px;background-image:url(../images/kwicks_sprite-1.jpg);background-repeat:no-repeat;}
+.kwicks a{display:block;height:40px;text-indent:-9999px;outline:none;}
+
+/* list des items vous pouvez modifier le nb ici*/
+#kwick1 {background-position:0px 0px;}
+#kwick2 {background-position:-200px 0px;}
+#kwick3 {background-position:-400px 0px;}
+#kwick4 { background-position:-600px 0px;}
+
+/* list des items reaction hover si vous avez modifié ci-dessus vous devez modifier ici*/
+#kwick1.active, #kwick1:hover { background-position: 0 bottom;}
+#kwick2.active, #kwick2:hover{background-position: -200px bottom;}
+#kwick3.active, #kwick3:hover {background-position: -400px bottom;}
+#kwick4.active, #kwick4:hover {background-position: -600px bottom; }
+
+/* bord arrondi gauche*/
+#kwick1 a{background-image:url(../images/end-1.jpg);background-repeat:no-repeat;background-position: left 0px;}
+#kwick1 a:hover{background-position: left -80px;}
+/* bord arrondi droit*/
+#kwick4 a{background-image:url(../images/end-1.jpg);background-repeat:no-repeat;background-position: right -40px;}
+#kwick4 a:hover{background-position: right -120px;}

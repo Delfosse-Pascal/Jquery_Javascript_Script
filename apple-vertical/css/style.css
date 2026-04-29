@@ -1,0 +1,9 @@
+@charset "iso-8859-1";
+* { margin: 0; padding: 0; }
+body { font: 13px "Trebuchet MS", Verdana, Helvetica, sans-serif; color: #666; }
+
+/* paramètres */
+#dockContainer { position: fixed; top: 160px; left: 6px;}
+#jqDock { position: relative; bottom: 48px;}
+#jqDock li { list-style: none; }
+.jqDockLabel { background: #888; color: #FFF; padding: 3px 10px; border-radius: 5px; }
